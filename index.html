@@ -1,13 +1,26 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9341704667724928"
+     crossorigin="anonymous"></script>
+<meta name="google-adsense-account" content="ca-pub-9341704667724928">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4PNTE1VJQX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-4PNTE1VJQX');
+</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Play Sprunki - the exciting online adventure game. Join thousands of players worldwide in this immersive experience.">
+    <meta name="description" content="Play Sprunki Incredibox, a fan-made music game to create unique beats online. Free beat-making with drag-and-drop gameplay and shareable mixes.">
+    <meta name="keywords" content="Sprunki, Incredibox, music game, online gameplay, beat-making, Sprunki mods, unique characters, mix sounds">
     <link rel="canonical" href="https://sprunkionlinegame.it.com">
-    <title>Sprunki Online - Play the Ultimate Adventure Game</title>
+    <title>Create Unique Beats with Sprunki Incredibox Game</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎵</text></svg>">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script>
         tailwind.config = {
             theme: {
@@ -15,8 +28,8 @@
                     colors: {
                         'apple-blue': '#0071e3',
                         'apple-light': '#f5f5f7',
-                        'apple-dark': '#1d1d1f',
-                        'apple-gray': '#86868b'
+                        'apple-gray': '#86868b',
+                        'apple-dark': '#1d1d1f'
                     }
                 }
             }
@@ -26,366 +39,1025 @@
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
         
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
             background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
-            color: #1d1d1f;
+            color: #333;
             min-height: 100vh;
-            position: relative;
         }
         
-        .hero-section {
-            background: linear-gradient(to right, #0a84ff, #5e5ce6);
-            color: white;
-            border-radius: 0 0 30px 30px;
-            box-shadow: 0 10px 30px rgba(0, 113, 227, 0.2);
+        .logo {
+            background: linear-gradient(90deg, #ff9a9e 0%, #fad0c4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 700;
         }
         
-        .game-frame {
+        .game-container {
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(10px);
             border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
             overflow: hidden;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-            border: none;
-            background: #000;
+            transition: all 0.3s ease;
+        }
+        
+        .game-container:hover {
+            box-shadow: 0 15px 40px rgba(0, 113, 227, 0.15);
         }
         
         .feature-card {
             transition: all 0.3s ease;
-            background: white;
-            border-radius: 18px;
+            border-radius: 16px;
             overflow: hidden;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            background: white;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
         }
         
         .feature-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 35px rgba(0, 113, 227, 0.2);
-        }
-        
-        .footer {
-            background: linear-gradient(to right, #1d1d1f, #000);
-            color: #f5f5f7;
-            border-radius: 30px 30px 0 0;
-        }
-        
-        .btn-apple {
-            background: linear-gradient(to right, #0071e3, #0a84ff);
-            color: white;
-            border-radius: 12px;
-            padding: 12px 28px;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0, 113, 227, 0.3);
-        }
-        
-        .btn-apple:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 7px 20px rgba(0, 113, 227, 0.4);
-        }
-        
-        .nav-link {
-            position: relative;
-            padding-bottom: 5px;
-        }
-        
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: #0071e3;
-            transition: width 0.3s ease;
-        }
-        
-        .nav-link:hover::after {
-            width: 100%;
-        }
-        
-        .stats-item {
-            background: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(10px);
-            border-radius: 16px;
-            padding: 20px;
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-        
-        .stats-item:hover {
-            background: rgba(255, 255, 255, 0.25);
             transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 113, 227, 0.1);
+        }
+        
+        .forum-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 16px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+        }
+        
+        .btn-primary {
+            background: linear-gradient(90deg, #0071e3 0%, #00a2ff 100%);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 113, 227, 0.4);
+        }
+        
+        .comment-item {
+            border-left: 3px solid #0071e3;
+            transition: all 0.2s ease;
+        }
+        
+        .comment-item:hover {
+            background-color: rgba(0, 113, 227, 0.03);
+        }
+        
+        .badge {
+            display: inline-block;
+            background: linear-gradient(90deg, #ff9a9e 0%, #fbc2eb 100%);
+            color: white;
+            border-radius: 20px;
+            padding: 2px 12px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        
+        #gameFrame {
+            border-radius: 12px;
+            overflow: hidden;
+            aspect-ratio: 16/9;
+        }
+        
+        .reply-form {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease;
+        }
+        
+        .reply-form.active {
+            max-height: 300px;
+        }
+        
+        .character-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
+            color: white;
+            margin: 0 auto;
         }
         
         @media (max-width: 768px) {
-            .hero-section {
-                border-radius: 0 0 20px 20px;
+            .feature-grid {
+                grid-template-columns: repeat(1, minmax(0, 1fr));
             }
             
-            .game-frame {
-                height: 400px;
+            #gameFrame {
+                aspect-ratio: 9/16;
             }
         }
     </style>
 </head>
-<body class="antialiased">
-    <!-- Navigation -->
-    <nav class="bg-white py-4 px-6 shadow-sm sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <div class="flex items-center">
-                <div class="bg-apple-blue w-10 h-10 rounded-xl flex items-center justify-center">
-                    <i class="fas fa-gamepad text-white text-xl"></i>
+<body class="min-h-screen flex flex-col">
+    <!-- Header Section -->
+    <header class="bg-white shadow-sm py-4 sticky top-0 z-50">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="w-10 h-10 rounded-full bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 flex items-center justify-center">
+                    <span class="text-white font-bold text-xl">S</span>
                 </div>
-                <span class="ml-3 text-xl font-bold text-apple-dark">Sprunki</span>
+                <h1 class="text-2xl font-bold text-gray-800"><span class="logo">Sprunki</span> Incredibox</h1>
             </div>
-            
-            <div class="hidden md:flex space-x-8">
-                <a href="#" class="nav-link font-medium text-apple-dark">Home</a>
-                <a href="#" class="nav-link font-medium text-apple-dark">Gameplay</a>
-                <a href="#" class="nav-link font-medium text-apple-dark">Features</a>
-                <a href="#" class="nav-link font-medium text-apple-dark">Community</a>
-                <a href="#" class="nav-link font-medium text-apple-dark">Support</a>
-            </div>
-            
-            <button class="btn-apple font-semibold">Play Now</button>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#game" class="text-gray-600 hover:text-apple-blue font-medium">Play Game</a>
+                <a href="#how-to-play" class="text-gray-600 hover:text-apple-blue font-medium">How to Play</a>
+                <a href="#features" class="text-gray-600 hover:text-apple-blue font-medium">Features</a>
+                <a href="#community" class="text-gray-600 hover:text-apple-blue font-medium">Community</a>
+            </nav>
+            <button class="md:hidden text-gray-600">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
         </div>
-    </nav>
+    </header>
 
-    <!-- Hero Section -->
-    <section class="hero-section py-16 px-6">
-        <div class="max-w-7xl mx-auto text-center">
-            <h1 class="text-5xl md:text-7xl font-extrabold mb-4">Sprunki Online</h1>
-            <p class="text-xl md:text-2xl max-w-3xl mx-auto mb-10 opacity-90">
-                The ultimate adventure game where strategy meets excitement in a vibrant, ever-evolving world
-            </p>
-            
-            <div class="max-w-5xl mx-auto">
-                <div class="game-frame w-full h-[500px]">
-                    <iframe src="https://sprunkiincredibox.org/game/sprunki-original/" class="w-full h-full" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <!-- Main Content -->
+    <main class="flex-grow">
+        <!-- Hero Section -->
+        <section class="py-12 md:py-20">
+            <div class="container mx-auto px-4 text-center">
+                <div class="max-w-3xl mx-auto">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-6 text-gray-800 leading-tight">
+                        Create Unique Beats with <span class="logo">Sprunki</span> Incredibox Game
+                    </h1>
+                    <p class="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
+                        Explore Sprunki Incredibox, a fan-made music game that lets you create unique beats online for free! Join the vibrant music community today!
+                    </p>
+                    <a href="#game" class="btn-primary text-white font-semibold py-3 px-8 inline-block rounded-full text-lg">
+                        Play Now →
+                    </a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Game Description -->
-    <section class="py-16 px-6">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">The Ultimate Online Adventure</h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                <div>
-                    <h3 class="text-2xl font-bold mb-4 text-apple-blue">Welcome to the World of Sprunki</h3>
-                    <p class="text-lg text-apple-gray mb-6 leading-relaxed">
-                        Sprunki is a massively multiplayer online adventure game set in a vibrant, ever-evolving universe. 
-                        Players from around the globe join forces to explore mystical lands, battle formidable foes, and 
-                        uncover ancient secrets.
-                    </p>
-                    <p class="text-lg text-apple-gray mb-6 leading-relaxed">
-                        With regular content updates and a thriving community, Sprunki offers an immersive experience 
-                        that keeps players engaged for hours on end. Whether you're a casual explorer or a competitive 
-                        strategist, there's a place for you in this expansive world.
-                    </p>
-                    <div class="flex items-center mt-8">
-                        <div class="flex -space-x-2">
-                            <img src="https://randomuser.me/api/portraits/women/44.jpg" class="w-12 h-12 rounded-full border-2 border-white" alt="Player">
-                            <img src="https://randomuser.me/api/portraits/men/32.jpg" class="w-12 h-12 rounded-full border-2 border-white" alt="Player">
-                            <img src="https://randomuser.me/api/portraits/women/68.jpg" class="w-12 h-12 rounded-full border-2 border-white" alt="Player">
-                            <img src="https://randomuser.me/api/portraits/men/54.jpg" class="w-12 h-12 rounded-full border-2 border-white" alt="Player">
-                        </div>
-                        <div class="ml-4">
-                            <p class="font-medium">Join <span class="text-apple-blue font-bold">1.2M+</span> players worldwide</p>
+        <!-- Game Section -->
+        <section id="game" class="py-12 bg-apple-light">
+            <div class="container mx-auto px-4">
+                <div class="max-w-6xl mx-auto game-container p-6 md:p-8">
+                    <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">Play Sprunki Incredibox Online</h2>
+                    <div class="relative">
+                        <iframe id="gameFrame" src="https://sprunkiincredibox.org/sprunki-phase-3-rm-but-all-alive.embed" 
+                                class="w-full" allowfullscreen></iframe>
+                        <div class="absolute bottom-4 right-4">
+                            <button onclick="toggleFullscreen()" class="bg-white rounded-lg shadow-md p-2 hover:bg-gray-100">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5v-4m0 0h-4m4 0l-5-5" />
+                                </svg>
+                            </button>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How to Play Section -->
+        <section id="how-to-play" class="py-16">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">How to Play Sprunki Incredibox Game</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto">Playing Sprunki Incredibox is easy and fun! Follow these simple steps to create your own beats.</p>
                 </div>
                 
-                <div class="grid grid-cols-2 gap-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
                     <div class="feature-card p-6">
-                        <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center mb-4">
-                            <i class="fas fa-swords text-apple-blue text-2xl"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Epic Battles</h3>
-                        <p class="text-apple-gray">Strategic combat with hundreds of unique skills and abilities</p>
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Step-by-Step Guide</h3>
+                        <ol class="space-y-4">
+                            <li class="flex items-start">
+                                <div class="bg-apple-blue rounded-full h-8 w-8 flex items-center justify-center text-white font-bold mr-3 flex-shrink-0">1</div>
+                                <p><strong>Choose Your Sounds:</strong> Pick from a selection of new beats, effects, melodies, and voices.</p>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="bg-apple-blue rounded-full h-8 w-8 flex items-center justify-center text-white font-bold mr-3 flex-shrink-0">2</div>
+                                <p><strong>Mix & Match:</strong> Drag and drop your chosen sounds onto characters to start building your track.</p>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="bg-apple-blue rounded-full h-8 w-8 flex items-center justify-center text-white font-bold mr-3 flex-shrink-0">3</div>
+                                <p><strong>Experiment:</strong> Test different combinations to see how your sounds blend together and create your own unique music.</p>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="bg-apple-blue rounded-full h-8 w-8 flex items-center justify-center text-white font-bold mr-3 flex-shrink-0">4</div>
+                                <p><strong>Share Your Mix:</strong> Once you're happy with your composition, share it with friends or save it to listen again later.</p>
+                            </li>
+                        </ol>
                     </div>
+                    
                     <div class="feature-card p-6">
-                        <div class="w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center mb-4">
-                            <i class="fas fa-users text-purple-600 text-2xl"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Guild System</h3>
-                        <p class="text-apple-gray">Form alliances and conquer territories with friends</p>
-                    </div>
-                    <div class="feature-card p-6">
-                        <div class="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center mb-4">
-                            <i class="fas fa-dragon text-green-600 text-2xl"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Mythical Creatures</h3>
-                        <p class="text-apple-gray">Discover and tame legendary beasts from ancient lore</p>
-                    </div>
-                    <div class="feature-card p-6">
-                        <div class="w-14 h-14 bg-yellow-100 rounded-xl flex items-center justify-center mb-4">
-                            <i class="fas fa-gem text-yellow-600 text-2xl"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Treasure Hunts</h3>
-                        <p class="text-apple-gray">Solve puzzles and find hidden riches across the realms</p>
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Why Play Sprunki Incredibox Mod?</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <div class="character-icon">🎵</div>
+                                <div class="ml-4">
+                                    <h4 class="font-bold text-gray-800">Drag-and-drop gameplay</h4>
+                                    <p class="text-gray-600">Simply drag and drop icons onto the beatboxers to create catchy beats and melodies.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="character-icon">🎹</div>
+                                <div class="ml-4">
+                                    <h4 class="font-bold text-gray-800">Intuitive interface</h4>
+                                    <p class="text-gray-600">The user-friendly interface makes it easy for anyone to start creating music, regardless of musical background.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="character-icon">🌟</div>
+                                <div class="ml-4">
+                                    <h4 class="font-bold text-gray-800">Endless possibilities</h4>
+                                    <p class="text-gray-600">Experiment with different combinations of sounds to discover your own signature style.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="character-icon">💬</div>
+                                <div class="ml-4">
+                                    <h4 class="font-bold text-gray-800">Share your creations</h4>
+                                    <p class="text-gray-600">Share your musical masterpieces with friends and family, or join the Sprunki community to collaborate.</p>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Stats Section -->
-    <section class="py-16 px-6 bg-apple-light">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">By The Numbers</h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-                <div class="stats-item">
-                    <div class="text-4xl font-bold text-apple-blue mb-2">1.2M+</div>
-                    <p class="text-lg">Active Players</p>
+        <!-- Features Section -->
+        <section id="features" class="py-16 bg-apple-light">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">Game Features</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto">Discover what makes Sprunki Incredibox the best online beat-making experience</p>
                 </div>
-                <div class="stats-item">
-                    <div class="text-4xl font-bold text-purple-600 mb-2">27</div>
-                    <p class="text-lg">Unique Realms</p>
-                </div>
-                <div class="stats-item">
-                    <div class="text-4xl font-bold text-green-600 mb-2">500+</div>
-                    <p class="text-lg">Quests Available</p>
-                </div>
-                <div class="stats-item">
-                    <div class="text-4xl font-bold text-yellow-600 mb-2">96%</div>
-                    <p class="text-lg">Positive Reviews</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    <div class="feature-card p-6 text-center">
+                        <div class="w-16 h-16 rounded-full bg-gradient-to-r from-purple-400 to-pink-500 flex items-center justify-center mx-auto mb-4">
+                            <span class="text-white text-2xl">🎧</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Unique Sounds</h3>
+                        <p class="text-gray-600">Exclusive collection of beats, melodies, and effects only available in the Sprunki mod.</p>
+                    </div>
+                    
+                    <div class="feature-card p-6 text-center">
+                        <div class="w-16 h-16 rounded-full bg-gradient-to-r from-blue-400 to-cyan-500 flex items-center justify-center mx-auto mb-4">
+                            <span class="text-white text-2xl">👥</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Special Characters</h3>
+                        <p class="text-gray-600">New characters with unique animations and sound personalities to bring your mix to life.</p>
+                    </div>
+                    
+                    <div class="feature-card p-6 text-center">
+                        <div class="w-16 h-16 rounded-full bg-gradient-to-r from-green-400 to-teal-500 flex items-center justify-center mx-auto mb-4">
+                            <span class="text-white text-2xl">📱</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Multi-Device</h3>
+                        <p class="text-gray-600">Play seamlessly on desktop, tablet, or mobile with our responsive design.</p>
+                    </div>
                 </div>
             </div>
+        </section>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Preview Embed Solution</title>
+    <style>
+        /* Add unique namespaces to avoid style conflicts */
+        .game-preview-container {
+            --gp-primary: #2c2c54;
+            --gp-secondary: #40407a;
+            --gp-accent: #00cec9;
+            --gp-text: #ffffff;
+            --gp-bg: #1a1a2e;
+            --gp-card-bg: linear-gradient(145deg, var(--gp-primary), var(--gp-secondary));
+            --gp-overlay: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+            --gp-button: linear-gradient(45deg, var(--gp-accent), #0984e3);
+            
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background: var(--gp-bg);
+            padding: 20px;
+            border-radius: 10px;
+            box-sizing: border-box;
+            max-width: 1400px;
+            margin: 20px auto;
+        }
+        
+        /* Avoid global style effects */
+        .game-preview-container * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style: none;
+            text-decoration: none;
+        }
+        
+        /* Component internal style */
+        .game-preview-container .gp-header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 0 15px;
+        }
+        
+        .game-preview-container .gp-header h2 {
+            font-size: 2.2rem;
+            color: var(--gp-text);
+            margin-bottom: 10px;
+            background: linear-gradient(90deg, #00dbde, #fc00ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 0 10px rgba(0, 200, 255, 0.2);
+        }
+        
+        .game-preview-container .gp-header p {
+            color: #b8c1ec;
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .game-preview-container .gp-games {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        
+        .game-preview-container .gp-game-card {
+            width: calc(25% - 20px); /* 4 per row */
+            min-width: 250px;
+            background: var(--gp-card-bg);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .game-preview-container .gp-game-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+        }
+        
+        .game-preview-container .gp-game-link {
+            display: block;
+        }
+        
+        .game-preview-container .gp-image-container {
+            position: relative;
+            height: 180px;
+            overflow: hidden;
+        }
+        
+        .game-preview-container .gp-game-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .game-preview-container .gp-game-card:hover .gp-game-image {
+            transform: scale(1.05);
+        }
+        
+        .game-preview-container .gp-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--gp-overlay);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .game-preview-container .gp-game-card:hover .gp-overlay {
+            opacity: 1;
+        }
+        
+        .game-preview-container .gp-play-btn {
+            background: var(--gp-button);
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            font-size: 1rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 12px rgba(0, 206, 201, 0.3);
+        }
+        
+        .game-preview-container .gp-play-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 18px rgba(0, 206, 201, 0.5);
+        }
+        
+        .game-preview-container .gp-game-info {
+            padding: 15px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .game-preview-container .gp-game-title {
+            font-size: 1.2rem;
+            color: var(--gp-text);
+            margin-bottom: 10px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        .game-preview-container .gp-game-title i {
+            color: #ffb142;
+            font-size: 1rem;
+        }
+        
+        .game-preview-container .gp-game-meta {
+            display: flex;
+            justify-content: space-between;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 12px;
+            margin-top: 10px;
+        }
+        
+        .game-preview-container .gp-game-genre, 
+        .game-preview-container .gp-game-rating {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+        }
+        
+        .game-preview-container .gp-game-genre {
+            color: #b8c1ec;
+        }
+        
+        .game-preview-container .gp-game-rating {
+            color: #ffb142;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        /* Responsive design */
+        @media (max-width: 1200px) {
+            .game-preview-container .gp-game-card {
+                width: calc(33.333% - 20px); /* 3 in a row */
+            }
+        }
+        
+        @media (max-width: 900px) {
+            .game-preview-container .gp-game-card {
+                width: calc(50% - 20px); /* 2 in a row */
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .game-preview-container .gp-game-card {
+                width: 100%; /* 1 in a row */
+                max-width: 350px;
+            }
+            
+            .game-preview-container .gp-header h2 {
+                font-size: 1.8rem;
+            }
+        }
+        
+        .game-preview-container .gp-footer-note {
+            text-align: center;
+            margin-top: 25px;
+            color: #b8c1ec;
+            font-size: 0.9rem;
+            padding-top: 15px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <!-- Original website content -->
+        
+        <!-- Game Preview Component - Copy from here -->
+        <div class="game-preview-container">
+            <div class="gp-header">
+                <h2>Popular game recommendations</h2>
+                <p>Selected 8 popular games, click on the picture to start the game in a new window</p>
+            </div>
+            
+            <div class="gp-games">
+                <!--Game 1 -->
+                <div class="gp-game-card">
+                    <a href="https://screwdom3d.org/" target="_blank" class="gp-game-link">
+                        <div class="gp-image-container">
+                            <img src="https://onlinegamedayday.com/screwdom3d-600.png?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="screwdom3d" class="gp-game-image">
+                            <div class="gp-overlay">
+                                <button class="gp-play-btn">
+                                    <i class="fas fa-play"></i>Play Now
+                                </button>
+                            </div>
+                        </div>
+                        <div class="gp-game-info">
+                            <h3 class="gp-game-title"><i class="fas fa-rocket"></i>Screwdom 3d</h3>
+                            <div class="gp-game-meta">
+                                <span class="gp-game-genre">puzzle | casual</span>
+                                <span class="gp-game-rating">
+                                    <i class="fas fa-star"></i>4.8
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- Game 2 -->
+                <div class="gp-game-card">
+                    <a href="https://climbingblock.com/" target="_blank" class="gp-game-link">
+                        <div class="gp-image-container">
+                            <img src="https://onlinegamedayday.com/climbingblock600.png?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="climbingblock" class="gp-game-image">
+                            <div class="gp-overlay">
+                                <button class="gp-play-btn">
+                                    <i class="fas fa-play"></i>Play Now
+                                </button>
+                            </div>
+                        </div>
+                        <div class="gp-game-info">
+                            <h3 class="gp-game-title"><i class="fas fa-hat-wizard"></i>Climbing Block</h3>
+                            <div class="gp-game-meta">
+                                <span class="gp-game-genre">climb | jump</span>
+                                <span class="gp-game-rating">
+                                    <i class="fas fa-star"></i>4.7
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- Game 3 -->
+                <div class="gp-game-card">
+                    <a href="https://screamals.com/" target="_blank" class="gp-game-link">
+                        <div class="gp-image-container">
+                            <img src="https://onlinegamedayday.com/screamals600.png?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="screamals" class="gp-game-image">
+                            <div class="gp-overlay">
+                                <button class="gp-play-btn">
+                                    <i class="fas fa-play"></i>Play Now
+                                </button>
+                            </div>
+                        </div>
+                        <div class="gp-game-info">
+                            <h3 class="gp-game-title"><i class="fas fa-car"></i>Screamals</h3>
+                            <div class="gp-game-meta">
+                                <span class="gp-game-genre">casual | sports</span>
+                                <span class="gp-game-rating">
+                                    <i class="fas fa-star"></i>4.9
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- Game 4 -->
+                <div class="gp-game-card">
+                    <a href="https://cutinhalf.org/" target="_blank" class="gp-game-link">
+                        <div class="gp-image-container">
+                            <img src="https://onlinegamedayday.com/cutinhalf600.png?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="cutinhalf" class="gp-game-image">
+                            <div class="gp-overlay">
+                                <button class="gp-play-btn">
+                                    <i class="fas fa-play"></i>Play Now
+                                </button>
+                            </div>
+                        </div>
+                        <div class="gp-game-info">
+                            <h3 class="gp-game-title"><i class="fas fa-cube"></i>Cut in Half</h3>
+                            <div class="gp-game-meta">
+                                <span class="gp-game-genre">slice | puzzle</span>
+                                <span class="gp-game-rating">
+                                    <i class="fas fa-star"></i>4.6
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- Game 5 -->
+                <div class="gp-game-card">
+                    <a href="https://onlinerobotroyale.com/" target="_blank" class="gp-game-link">
+                        <div class="gp-image-container">
+                            <img src="https://onlinegamedayday.com/onlinerobotroyale600.png?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="onlinerobotroyale" class="gp-game-image">
+                            <div class="gp-overlay">
+                                <button class="gp-play-btn">
+                                    <i class="fas fa-play"></i>Play Now
+                                </button>
+                            </div>
+                        </div>
+                        <div class="gp-game-info">
+                            <h3 class="gp-game-title"><i class="fas fa-user-secret"></i>Online Robot Royale</h3>
+                            <div class="gp-game-meta">
+                                <span class="gp-game-genre">robot | shooting</span>
+                                <span class="gp-game-rating">
+                                    <i class="fas fa-star"></i>4.8
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- Game 6 -->
+                <div class="gp-game-card">
+                    <a href="https://craftbrainrot.xyz/" target="_blank" class="gp-game-link">
+                        <div class="gp-image-container">
+                            <img src="https://onlinegamedayday.com/craftbrainrot600.png?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="craftbrainrot" class="gp-game-image">
+                            <div class="gp-overlay">
+                                <button class="gp-play-btn">
+                                    <i class="fas fa-play"></i>Play Now
+                                </button>
+                            </div>
+                        </div>
+                        <div class="gp-game-info">
+                            <h3 class="gp-game-title"><i class="fas fa-futbol"></i>Craft Brainrot</h3>
+                            <div class="gp-game-meta">
+                                <span class="gp-game-genre">puzzle | exercise</span>
+                                <span class="gp-game-rating">
+                                    <i class="fas fa-star"></i>4.7
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- Game 7 -->
+                <div class="gp-game-card">
+                    <a href="https://pilesofmahjong.com/" target="_blank" class="gp-game-link">
+                        <div class="gp-image-container">
+                            <img src="https://onlinegamedayday.com/pilesofmahjong600.png?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="piles of mahjong" class="gp-game-image">
+                            <div class="gp-overlay">
+                                <button class="gp-play-btn">
+                                    <i class="fas fa-play"></i>Play Now
+                                </button>
+                            </div>
+                        </div>
+                        <div class="gp-game-info">
+                            <h3 class="gp-game-title"><i class="fas fa-candy-cane"></i>Piles of Pahjong</h3>
+                            <div class="gp-game-meta">
+                                <span class="gp-game-genre">puzzle | casual</span>
+                                <span class="gp-game-rating">
+                                    <i class="fas fa-star"></i>4.5
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- Game 8 -->
+                <div class="gp-game-card">
+                    <a href="https://zomblox.xyz/" target="_blank" class="gp-game-link">
+                        <div class="gp-image-container">
+                            <img src="https://onlinegamedayday.com/zomblox600.png?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="zomblox" class="gp-game-image">
+                            <div class="gp-overlay">
+                                <button class="gp-play-btn">
+                                    <i class="fas fa-play"></i>Play Now
+                                </button>
+                            </div>
+                        </div>
+                        <div class="gp-game-info">
+                            <h3 class="gp-game-title"><i class="fas fa-dragon"></i>Zomblox</h3>
+                            <div class="gp-game-meta">
+                                <span class="gp-game-genre">casual | shooting</span>
+                                <span class="gp-game-rating">
+                                    <i class="fas fa-star"></i>4.9
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="gp-footer-note">
+                All games will open in a new window
+            </div>
         </div>
-    </section>
+        <!-- Game Preview Component - End copying here -->
+        
+        <!-- The original content of the website continues -->
+        </div>
+    </div>
 
-    <!-- How to Play -->
-    <section class="py-16 px-6">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Getting Started</h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="text-center">
-                    <div class="w-24 h-24 bg-apple-blue rounded-full flex items-center justify-center mx-auto mb-6">
-                        <span class="text-white text-4xl font-bold">1</span>
+    <!-- Font Awesome Icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        // Add click effects
+        document.querySelectorAll('.gp-game-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                // Preventing a button from being triggered twice when clicked
+                if (e.target.classList.contains('gp-play-btn')) return;
+                
+                const button = this.querySelector('.gp-play-btn');
+                if (button) {
+                    button.classList.add('clicked');
+                    setTimeout(() => {
+                        button.classList.remove('clicked');
+                    }, 300);
+                }
+            });
+        });
+    </script>
+        <!-- Community Forum -->
+        <section id="community" class="py-16">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto forum-card p-6">
+                    <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">Community Forum</h2>
+                    <p class="text-center text-gray-600 mb-8">Share your creations, ask questions, and connect with other Sprunki players!</p>
+                    
+                    <!-- Comment Form -->
+                    <div class="mb-10">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Post a Comment</h3>
+                        <form id="commentForm" class="space-y-4">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div>
+                                    <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                                    <input type="text" id="name" name="name" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-apple-blue focus:border-transparent">
+                                </div>
+                                <div>
+                                    <label for="website" class="block text-sm font-medium text-gray-700 mb-1">Website (optional)</label>
+                                    <input type="url" id="website" name="website" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-apple-blue focus:border-transparent">
+                                </div>
+                            </div>
+                            <div>
+                                <label for="comment" class="block text-sm font-medium text-gray-700 mb-1">Comment</label>
+                                <textarea id="comment" name="comment" rows="4" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-apple-blue focus:border-transparent"></textarea>
+                            </div>
+                            <div class="flex justify-end">
+                                <button type="submit" class="btn-primary text-white font-semibold py-2 px-6 rounded-lg">
+                                    Post Comment
+                                </button>
+                            </div>
+                        </form>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4">Create Account</h3>
-                    <p class="text-apple-gray max-w-xs mx-auto">
-                        Sign up with email or social media in seconds. No downloads required!
-                    </p>
-                </div>
-                <div class="text-center">
-                    <div class="w-24 h-24 bg-apple-blue rounded-full flex items-center justify-center mx-auto mb-6">
-                        <span class="text-white text-4xl font-bold">2</span>
+                    
+                    <!-- Comments Section -->
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Recent Comments</h3>
+                        <div id="commentsContainer" class="space-y-6">
+                            <!-- Sample comments will be loaded here -->
+                        </div>
+                        
+                        <div id="loadMore" class="text-center mt-8 hidden">
+                            <button class="text-apple-blue font-medium hover:underline">
+                                Load More Comments
+                            </button>
+                        </div>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4">Customize Avatar</h3>
-                    <p class="text-apple-gray max-w-xs mx-auto">
-                        Choose from hundreds of customization options to create your unique hero.
-                    </p>
-                </div>
-                <div class="text-center">
-                    <div class="w-24 h-24 bg-apple-blue rounded-full flex items-center justify-center mx-auto mb-6">
-                        <span class="text-white text-4xl font-bold">3</span>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4">Start Adventure</h3>
-                    <p class="text-apple-gray max-w-xs mx-auto">
-                        Complete the tutorial and embark on your first quest in the world of Sprunki.
-                    </p>
                 </div>
             </div>
-            
-            <div class="text-center mt-16">
-                <button class="btn-apple px-10 py-5 text-xl">
-                    <i class="fas fa-user-plus mr-3"></i> Create Free Account
-                </button>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Footer -->
-    <footer class="footer py-12 px-6">
-        <div class="max-w-7xl mx-auto">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div>
-                    <div class="flex items-center mb-6">
-                        <div class="bg-apple-blue w-10 h-10 rounded-xl flex items-center justify-center">
-                            <i class="fas fa-gamepad text-white text-xl"></i>
+    <footer class="bg-apple-dark text-white py-10">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="mb-6 md:mb-0">
+                        <div class="flex items-center space-x-2">
+                            <div class="w-8 h-8 rounded-full bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 flex items-center justify-center">
+                                <span class="text-white font-bold text-lg">S</span>
+                            </div>
+                            <h3 class="text-xl font-bold"><span class="logo">Sprunki</span> Incredibox</h3>
                         </div>
-                        <span class="ml-3 text-xl font-bold text-white">Sprunki</span>
+                        <p class="mt-2 text-gray-400">Create your own beats with our free online music game</p>
                     </div>
-                    <p class="text-apple-gray mb-6">
-                        The ultimate online adventure game with endless possibilities and a thriving community.
-                    </p>
-                    <div class="flex space-x-4">
-                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center">
-                            <i class="fab fa-facebook-f text-white"></i>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm3 8h-1.35c-.538 0-.65.221-.65.778v1.222h2l-.209 2h-1.791v7h-3v-7h-2v-2h2v-2.308c0-1.769.931-2.692 3.029-2.692h1.971v3z"/></svg>
                         </a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center">
-                            <i class="fab fa-twitter text-white"></i>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.066 9.645c.183 4.04-2.83 8.544-8.164 8.544-1.622 0-3.131-.476-4.402-1.291 1.524.18 3.045-.244 4.252-1.189-1.256-.023-2.317-.854-2.684-1.995.451.086.895.061 1.298-.049-1.381-.278-2.335-1.522-2.304-2.853.388.215.83.344 1.301.359-1.279-.855-1.641-2.544-.889-3.835 1.416 1.738 3.533 2.881 5.92 3.001-.419-1.796.944-3.527 2.799-3.527.825 0 1.572.349 2.096.907.654-.128 1.27-.368 1.824-.697-.215.671-.67 1.233-1.263 1.589.581-.07 1.135-.224 1.649-.453-.384.578-.87 1.084-1.433 1.489z"/></svg>
                         </a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center">
-                            <i class="fab fa-instagram text-white"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center">
-                            <i class="fab fa-discord text-white"></i>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm3.663 9.119c1.132 0 2.051.919 2.051 2.051 0 1.133-.919 2.051-2.051 2.051s-2.051-.918-2.051-2.051c0-1.132.918-2.051 2.051-2.051zm-7.339 0c1.132 0 2.052.919 2.052 2.051 0 1.133-.92 2.051-2.052 2.051s-2.051-.918-2.051-2.051c0-1.132.919-2.051 2.051-2.051zm3.672 6.779c-2.924 1.061-5.384-.601-5.384-.601l.466-2.726s1.75 1.08 3.328 1.022c1.578-.057 2.086-.999 2.086-.999s.2.125.6.291c.4.166 1.533.291 1.533.291s.5-3.91-.541-5.91c-1.042-2-3.666-1.998-4.202-1.861-.536.137-1.902.568-1.902.568s-.153-.507-.099-1.064c.054-.557.271-1.039.271-1.039s3.709.802 6.937 3.402c3.229 2.6 3.229 6.752 3.229 6.752s-.332 1.125-1.25 1.666c-.917.542-2.042.514-2.042.514s-1.095-.057-1.808-.229z"/></svg>
                         </a>
                     </div>
                 </div>
-                
-                <div>
-                    <h3 class="text-lg font-bold text-white mb-6">Game Links</h3>
-                    <ul class="space-y-3">
-                        <li><a href="#" class="text-apple-gray hover:text-white">Download Client</a></li>
-                        <li><a href="#" class="text-apple-gray hover:text-white">Game Updates</a></li>
-                        <li><a href="#" class="text-apple-gray hover:text-white">Leaderboards</a></li>
-                        <li><a href="#" class="text-apple-gray hover:text-white">Events Calendar</a></li>
-                        <li><a href="#" class="text-apple-gray hover:text-white">Merchandise</a></li>
-                    </ul>
+                <div class="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400 text-sm">
+                    <p>&copy; 2023 Sprunki Incredibox. This is a fan-made project. Incredibox is a trademark of So Far So Good.</p>
+                    <p class="mt-2">sprunkionlinegame.it.com | All rights reserved</p>
                 </div>
-                
-                <div>
-                    <h3 class="text-lg font-bold text-white mb-6">Support</h3>
-                    <ul class="space-y-3">
-                        <li><a href="#" class="text-apple-gray hover:text-white">Help Center</a></li>
-                        <li><a href="#" class="text-apple-gray hover:text-white">FAQs</a></li>
-                        <li><a href="#" class="text-apple-gray hover:text-white">Community Forums</a></li>
-                        <li><a href="#" class="text-apple-gray hover:text-white">Contact Us</a></li>
-                        <li><a href="#" class="text-apple-gray hover:text-white">Server Status</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h3 class="text-lg font-bold text-white mb-6">Legal</h3>
-                    <ul class="space-y-3">
-                        <li><a href="#" class="text-apple-gray hover:text-white">Terms of Service</a></li>
-                        <li><a href="#" class="text-apple-gray hover:text-white">Privacy Policy</a></li>
-                        <li><a href="#" class="text-apple-gray hover:text-white">Cookie Policy</a></li>
-                        <li><a href="#" class="text-apple-gray hover:text-white">Refund Policy</a></li>
-                        <li><a href="#" class="text-apple-gray hover:text-white">EULA</a></li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="border-t border-gray-800 mt-12 pt-8 text-center">
-                <p class="text-apple-gray">
-                    © 2023 Sprunki Online Game. All rights reserved. sprunkionlinegame.it.com
-                </p>
             </div>
         </div>
     </footer>
 
     <script>
-        // Simple animation for stats counter
-        document.addEventListener('DOMContentLoaded', function() {
-            const statsItems = document.querySelectorAll('.stats-item');
+        // Fullscreen toggle for game
+        function toggleFullscreen() {
+            const iframe = document.getElementById('gameFrame');
             
-            statsItems.forEach(item => {
-                item.addEventListener('mouseover', function() {
-                    this.style.transform = 'translateY(-10px)';
+            if (!document.fullscreenElement) {
+                if (iframe.requestFullscreen) {
+                    iframe.requestFullscreen();
+                } else if (iframe.webkitRequestFullscreen) {
+                    iframe.webkitRequestFullscreen();
+                } else if (iframe.msRequestFullscreen) {
+                    iframe.msRequestFullscreen();
+                }
+            } else {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                } else if (document.webkitExitFullscreen) {
+                    document.webkitExitFullscreen();
+                } else if (document.msExitFullscreen) {
+                    document.msExitFullscreen();
+                }
+            }
+        }
+        
+        // Forum functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Sample comments data
+            const sampleComments = [
+                {
+                    id: 1,
+                    name: "MusicLover42",
+                    website: "https://beatmaker.com",
+                    comment: "This mod is amazing! The new characters and sounds really add a fresh vibe to the Incredibox experience.",
+                    timestamp: "2 hours ago",
+                    replies: [
+                        {
+                            id: 101,
+                            name: "BeatMaster",
+                            website: "",
+                            comment: "Totally agree! Have you tried combining the new bass with the synth melody? It creates an awesome effect.",
+                            timestamp: "1 hour ago"
+                        }
+                    ]
+                },
+                {
+                    id: 2,
+                    name: "DJ_Sam",
+                    website: "",
+                    comment: "I've been playing this for hours. The share feature works great - sent my mix to all my friends!",
+                    timestamp: "5 hours ago",
+                    replies: []
+                },
+                {
+                    id: 3,
+                    name: "SoundExplorer",
+                    website: "https://soundcloud.com/soundexplorer",
+                    comment: "The interface is so intuitive. My 10-year-old was making cool beats within minutes!",
+                    timestamp: "1 day ago",
+                    replies: [
+                        {
+                            id: 301,
+                            name: "ParentGamer",
+                            website: "",
+                            comment: "Same here! It's rare to find a game that's both fun and creative for kids and adults.",
+                            timestamp: "20 hours ago"
+                        }
+                    ]
+                }
+            ];
+            
+            const commentsContainer = document.getElementById('commentsContainer');
+            const commentForm = document.getElementById('commentForm');
+            
+            // Bad words filter
+            const badWords = ["idiot", "stupid", "hate", "moron"];
+            
+            function filterBadWords(text) {
+                return badWords.reduce((filtered, word) => {
+                    const regex = new RegExp(word, "gi");
+                    return filtered.replace(regex, "****");
+                }, text);
+            }
+            
+            // Render comments
+            function renderComments(comments) {
+                commentsContainer.innerHTML = '';
+                
+                comments.slice(0, 50).forEach(comment => {
+                    const commentElement = document.createElement('div');
+                    commentElement.className = 'comment-item bg-white p-5 rounded-lg';
+                    
+                    const websiteLink = comment.website ? 
+                        `<a href="${comment.website}" target="_blank" class="text-apple-blue hover:underline">${new URL(comment.website).hostname}</a>` : 
+                        '';
+                    
+                    commentElement.innerHTML = `
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="font-bold text-gray-800">${comment.name}</h4>
+                                ${websiteLink ? `<div class="text-sm text-gray-500">${websiteLink}</div>` : ''}
+                            </div>
+                            <span class="text-sm text-gray-500">${comment.timestamp}</span>
+                        </div>
+                        <p class="mt-3 text-gray-700">${filterBadWords(comment.comment)}</p>
+                        <div class="mt-4">
+                            <button class="toggle-reply text-sm text-apple-blue font-medium hover:underline" data-comment-id="${comment.id}">
+                                ${comment.replies.length > 0 ? `${comment.replies.length} replies` : 'Reply'}
+                            </button>
+                        </div>
+                        <div class="reply-form mt-3" id="reply-form-${comment.id}">
+                            <form class="reply-form-inner mt-4 space-y-3">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Your Name</label>
+                                    <input type="text" name="reply-name" required class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-apple-blue focus:border-transparent">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Comment</label>
+                                    <textarea name="reply-comment" rows="2" required class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-apple-blue focus:border-transparent"></textarea>
+                                </div>
+                                <div class="flex justify-end">
+                                    <button type="submit" class="bg-gray-200 text-gray-800 font-medium py-1 px-4 rounded-lg hover:bg-gray-300">Post Reply</button>
+                                </div>
+                            </form>
+                            ${comment.replies.length > 0 ? `
+                                <div class="replies mt-6 space-y-4">
+                                    ${comment.replies.map(reply => `
+                                        <div class="bg-gray-50 p-4 rounded-lg">
+                                            <div class="flex justify-between">
+                                                <h5 class="font-bold text-gray-800">${reply.name}</h5>
+                                                <span class="text-sm text-gray-500">${reply.timestamp}</span>
+                                            </div>
+                                            <p class="mt-2 text-gray-700">${filterBadWords(reply.comment)}</p>
+                                        </div>
+                                    `).join('')}
+                                </div>
+                            ` : ''}
+                        </div>
+                    `;
+                    
+                    commentsContainer.appendChild(commentElement);
                 });
                 
-                item.addEventListener('mouseout', function() {
-                    this.style.transform = 'translateY(0)';
+                // Add event listeners to reply buttons
+                document.querySelectorAll('.toggle-reply').forEach(button => {
+                    button.addEventListener('click', function() {
+                        const commentId = this.getAttribute('data-comment-id');
+                        const form = document.getElementById(`reply-form-${commentId}`);
+                        form.classList.toggle('active');
+                    });
                 });
+                
+                // Add event listeners to reply forms
+                document.querySelectorAll('.reply-form-inner').forEach(form => {
+                    form.addEventListener('submit', function(e) {
+                        e.preventDefault();
+                        const name = this.querySelector('[name="reply-name"]').value;
+                        const comment = this.querySelector('[name="reply-comment"]').value;
+                        
+                        if (name && comment) {
+                            alert(`Reply posted!\nName: ${name}\nComment: ${comment}`);
+                            this.reset();
+                        }
+                    });
+                });
+            }
+            
+            // Handle comment submission
+            commentForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const name = document.getElementById('name').value;
+                const website = document.getElementById('website').value;
+                const comment = document.getElementById('comment').value;
+                
+                if (name && comment) {
+                    // Create new comment object
+                    const newComment = {
+                        id: Date.now(),
+                        name: name,
+                        website: website,
+                        comment: comment,
+                        timestamp: "Just now",
+                        replies: []
+                    };
+                    
+                    // Add to beginning of comments array
+                    sampleComments.unshift(newComment);
+                    
+                    // Re-render comments
+                    renderComments(sampleComments);
+                    
+                    // Reset form
+                    commentForm.reset();
+                    
+                    // Show success message
+                    alert("Thanks for your comment! It has been posted.");
+                }
             });
+            
+            // Initial render
+            renderComments(sampleComments);
         });
     </script>
 </body>
